@@ -1,0 +1,66 @@
+.container ol li {
+    font-size: 1.4em;
+    color: #cecece;
+    text-align: center;
+    list-style: none;
+}
+p{
+    font-size: 1.4em;
+    color: #cecece;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.start{
+    display: flex;
+    justify-content: center;
+    padding-top: 2em;
+}
+
+.start .btn{
+    position: absolute;
+    text-shadow: 
+      2px 2px 1px rgba(0,0,0,.4),
+      0 0 20px #fe3a80,
+      0 0 40px rgba(255, 0, 91, .75),
+      0 0 50px rgba(255, 0, 91, .75),
+      0 0 100px rgba(255, 0, 91, .75);
+}
+.start .btn{
+    margin: 0 5px;
+    padding: 10px;
+    letter-spacing: 1px;
+    background: none;
+    border: 2px solid #0e0202;
+    border-radius: 2.25em;
+    color: #060005;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: .5s;
+    outline: none;
+    text-decoration: none;
+  }
+.start .btn:hover{
+        
+        color: #ff005b;
+        text-shadow: 0 0 7px #ff005b;
+        border-color: #ff005b;
+        box-shadow: 0 0 15px #ff005b, inset 0 0 15px #ff005b;
+}
+
+#form{
+    display: flex;
+    justify-content: center;
+    margin-top: 4em;
+}
+
+#form .userid{
+    padding: .7em 2em;
+    width: 50%;
+    border: none;
+    border-radius: 24px;
+    font-size: 1em;
+    background-color: #d9aabb;
+    color: #691432;
+}
