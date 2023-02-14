@@ -1,5 +1,5 @@
 
-import '../styles/App.css';
+import './App.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Main from '../pages/Main';
 import Quiz from '../pages/Quiz';
