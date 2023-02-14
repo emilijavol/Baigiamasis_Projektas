@@ -14,7 +14,7 @@ export async function getQuestions(req,res){
 export async function postQuestion(req,res){
     try {
         Questions.insertMany({questions,answers }, function(err, data){
-            res.json({ msg: "Data Saved Successfully...!"})
+            res.json({ msg: "Data Saved"})
         })
     } catch (error) {
         res.json({ error })
@@ -24,7 +24,7 @@ export async function postQuestion(req,res){
 export async function deleteQuestions(req,res){
     try {
         await Questions.deleteMany();
-        res.json({ msg: "Questions Deleted Successfully...!"});
+        res.json({ msg: "Questions Deleted"});
    } catch (error) {
         res.json({ error })
    }
@@ -42,10 +42,10 @@ export async function getResult(req,res){
 export async function postResult(req,res){
     try {
         const { username, result, attempts, points, achieved } = req.body;
-        if(!username && !result) throw new Error('Data Not Provided...!');
+        if(!username && !result) throw new Error('Data Not Provided');
 
         Results.create({ username, result, attempts, points, achieved }, function(err, data){
-            res.json({ msg : "Result Saved Successfully...!"})
+            res.json({ msg : "Result Saved "})
         })
 
    } catch (error) {
@@ -56,7 +56,7 @@ export async function postResult(req,res){
 export async function deleteResult(req,res){
     try {
         await Results.deleteMany();
-        res.json({ msg : "Result Deleted Successfully...!"})
+        res.json({ msg : "Result Deleted"})
     } catch (error) {
         res.json({ error })
     }
