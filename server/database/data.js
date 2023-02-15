@@ -1,47 +1,47 @@
 export default [
     {
         id:1,
-        question:"",
+        question:"What's Batmans full name?",
         options : [
-            'vdue',
-            'lwbnd',
-            'bckwi',
+            'Dwayne Johnson',
+            'Lil Wayne',
+            'Bruce Wayne',
         ]
     },
     {
         id:2,
-        question:"blablabla?",
+        question:"What's Batmans form of transport?",
         options : [
-            'vtas',
-            'visa',
-            'kivis',
+            'Bat-bicycle',
+            'Bat-bus',
+            'Bat-mobile',
         ]
     },
     {
         id:3,
-        question:"Bbikwd",
+        question:"Which one is an enemy of Batman?",
         options : [
-            'lan',
-            'geran',
-            'gera',
+            'Joker',
+            'Count dracula',
+            'Donald Trump',
         ]
     },
     {
         id:4,
-        question:"labas",
+        question:"Who created the Batman character?",
         options : [
-            'tew',
-            'd',
-            'ciau',
+            'Tadas Vidmantas',
+            'Bob Kane',
+            'Bob Dyllan',
         ]
     },
     {
         id:5,
-        question:"hai",
+        question:"Who killed Batmans parents?",
         options : [
-            'bai',
-            'hus',
-            'buysdcv',
+            'Joe Chill',
+            'Joe Rogan',
+            'Joe Biden',
         ]
     }
     

@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import { useDispatch } from "react-redux"
-import data, {answers}from "../database/data"
+
 import * as Action from '../redux/question_reducer'
+import { getServerData } from "../resultCounter/resultCounter"
 
 
 export const useGetQuestions=()=>{
@@ -11,25 +12,28 @@ export const useGetQuestions=()=>{
    useEffect(()=>{
     setGetData(prev =>({...prev, isLoading :true}));
 
-(async()=>{
-try {
-    let question=await data;
+    (async () => {
+        try {
+            const [{ questions, answers }] = await getServerData(`${process.env.REACT_APP_SERVER_HOSTNAME}/api/questions`, (data) => data)
+            
+            if(questions.length > 0){
+                setGetData(prev => ({...prev, isLoading : false}));
+                setGetData(prev => ({...prev, apiData : questions}));
 
-    if (question.length >0){
-        setGetData(prev =>({...prev, isLoading :false}));
-        setGetData(prev =>({...prev, apiData :{question, answers}}));
+                /** dispatch an action */
+                dispatch(Action.startExamAction({ question : questions, answers }))
 
-        dispatch(Action.startExamAction({question, answers}))
-    }else{
-        throw new Error("Nėra klausimų");
-    }
-} catch (error) {
-    setGetData(prev =>({...prev, isLoading :false}));
-    setGetData(prev =>({...prev, isLoading :error}));
-}
-})();
-   },[dispatch]);
-   return [getData,setGetData];
+            } else{
+                throw new Error("No Question Avalibale");
+            }
+        } catch (error) {
+            setGetData(prev => ({...prev, isLoading : false}));
+            setGetData(prev => ({...prev, serverError : error}));
+        }
+    })();
+}, [dispatch]);
+
+return [getData, setGetData];
 }
 
 export const MoveNextQuestion =()=>async(dispatch)=>{
