@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
+import React from "react";
 import './Result.css'
 import { Link } from "react-router-dom";
-import ResultTable from "../components/ResultTable";
+import ResultTable from "../../components/ResultTable";
 import { useDispatch, useSelector } from "react-redux";
-import { resetAllAction } from "../redux/question_reducer";
-import { resetResultAction } from "../redux/result_reducer";
-import { attempts_Number ,earnPoints_Number, finalResult} from "../resultCounter/resultCounter";
-import { usePublishResult } from "../hooks/setResult";
+import { resetAllAction } from "../../redux/question_reducer";
+import { resetResultAction } from "../../redux/result_reducer";
+import { attempts_Number ,earnPoints_Number, finalResult} from "../../resultCounter/resultCounter";
+import { usePublishResult } from "../../hooks/setResult";
 
 export default function Result() {
 

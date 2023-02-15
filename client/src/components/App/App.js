@@ -1,10 +1,10 @@
 
 import './App.css';
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
-import Main from '../pages/Main';
-import Quiz from '../pages/Quiz';
-import Result from '../pages/Result';
-import { UserAuth } from '../resultCounter/resultCounter';
+import Main from '../../pages/Main/Main';
+import Quiz from '../../pages/Quiz';
+import Result from '../../pages/Result/Result';
+import { UserAuth } from '../../resultCounter/resultCounter';
 
 
 const router=createBrowserRouter([

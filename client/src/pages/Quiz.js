@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Questions from '../components/Questions';
 import { MoveNextQuestion,MovePrevQuestion } from "../hooks/getQuestions";
 import { PushAnswer } from "../hooks/setResult";
